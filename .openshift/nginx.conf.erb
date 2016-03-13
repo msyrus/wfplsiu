@@ -30,7 +30,9 @@ server {
     listen  <%= ENV['OPENSHIFT_NGINX_IP'] %>:<%= ENV['OPENSHIFT_NGINX_PORT'] %>;
     root    <%= ENV['OPENSHIFT_REPO_DIR'] %>/public;
 
+    index index.html index.htm
+
     location / {
-        index  index.html index.htm;
+        try_files   $uri $uri/ /index.html;
     }
 }
