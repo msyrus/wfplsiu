@@ -1,0 +1,49 @@
+html, body {
+  height: 100%;
+}
+
+body, .btn-default {
+  color: #ddd;
+  background-color: #725596;
+}
+
+a {
+  color: #ddd;
+}
+
+.wrapper {
+  min-height: 100vh;
+  margin: 0 auto -40px;
+}
+
+.main {
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+}
+
+.main a {
+  text-decoration: underline;
+}
+
+.btn-default {
+  background: #725596;
+}
+
+.btn-corner {
+  margin: 8px 6px;
+}
+
+.btn-lg {
+  padding: 12px 20px;
+  margin: 5px 15px;
+}
+
+.option-group {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.footer, .push {
+  width: 100%;
+  height: 40px;
+}
