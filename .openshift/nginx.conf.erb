@@ -33,10 +33,14 @@ server {
     index index.html index.htm;
 
     location / {
-
+        try_files $uri $uri/ @htmlext;
     }
 
-    location /about {
-      
+    location ~ \.html$ {
+        try_files $uri =404;
+    }
+
+    location @htmlext {
+        rewrite ^(.*)$ $1.html last;
     }
 }
