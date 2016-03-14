@@ -32,7 +32,5 @@ server {
 
     index index.html;
 
-    location ~ /about/? {
-      alias /about/;
-    }
+    rewrite ^/about/?$ /about/index.html permanent;
 }
