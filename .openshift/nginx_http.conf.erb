@@ -31,4 +31,5 @@ server {
     root    <%= ENV['OPENSHIFT_REPO_DIR'] %>/public;
 
     index index.html;
+    try_files $uri/index.html $uri.html $uri/ $uri =404;
 }
