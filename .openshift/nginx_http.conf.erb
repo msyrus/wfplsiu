@@ -41,6 +41,6 @@ server {
     }
 
     location @htmlext {
-        rewrite ^/(.*)$ $1.html last;
+        rewrite ^/(.*)$ /index.html;
     }
 }
