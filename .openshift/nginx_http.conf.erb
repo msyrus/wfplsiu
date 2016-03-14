@@ -32,4 +32,6 @@ server {
 
     index index.html;
     try_files $uri/index.html $uri.html $uri/ $uri =404;
+
+    error_page 404 /404.html;
 }
