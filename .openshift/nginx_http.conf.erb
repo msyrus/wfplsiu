@@ -30,8 +30,8 @@ server {
     listen  <%= ENV['OPENSHIFT_NGINX_IP'] %>:<%= ENV['OPENSHIFT_NGINX_PORT'] %>;
     root    <%= ENV['OPENSHIFT_REPO_DIR'] %>/public;
 
-    rewrite ^(/.*)\.html(\?.*)?$ $1$2 permanent;
-    rewrite ^/(.*)/$ /$1 permanent;
+    #rewrite ^(/.*)\.html(\?.*)?$ $1$2 permanent;
+    #rewrite ^/(.*)/$ /$1 permanent;
     index index.html;
     try_files $uri/index.html $uri.html $uri/ $uri =404;
 }
