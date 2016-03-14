@@ -32,5 +32,5 @@ server {
 
     index index.html;
 
-    rewrite ^/about/?$ /about/index.html permanent;
+    rewrite ^/(.*)/$ /$1 permanent;
 }
