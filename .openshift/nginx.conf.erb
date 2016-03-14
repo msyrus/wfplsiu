@@ -31,16 +31,4 @@ server {
     root    <%= ENV['OPENSHIFT_REPO_DIR'] %>/public;
 
     index index.html;
-
-    location / {
-        try_files $uri $uri/ @htmlext;
-    }
-
-    location ~ \.html$ {
-        try_files $uri =404;
-    }
-
-    location @htmlext {
-        rewrite ^/(.*)$ /index.html;
-    }
 }
