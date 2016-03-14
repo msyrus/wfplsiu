@@ -31,4 +31,8 @@ server {
     root    <%= ENV['OPENSHIFT_REPO_DIR'] %>/public;
 
     index index.html;
+
+    location ~ /about/? {
+      alias /about/
+    }
 }
