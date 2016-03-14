@@ -30,7 +30,7 @@ server {
     listen  <%= ENV['OPENSHIFT_NGINX_IP'] %>:<%= ENV['OPENSHIFT_NGINX_PORT'] %>;
     root    <%= ENV['OPENSHIFT_REPO_DIR'] %>/public;
 
-    index index.html index.htm;
+    index index.html;
 
     location / {
         try_files $uri $uri/ @htmlext;
@@ -41,6 +41,6 @@ server {
     }
 
     location @htmlext {
-        rewrite ^(.*)$ $1.html last;
+        rewrite ^/(.*)$ $1.html last;
     }
 }
