@@ -58,7 +58,7 @@ var queries = [{
   answers: []
 }, {
   id: 8,
-  text: "What are you building?",
+  text: "What the fuck are you building?",
   answers: [{
     text: "Web app",
     target: 9
@@ -99,7 +99,7 @@ var queries = [{
   answers: []
 }, {
   id: 13,
-  text: "Do you give a flying fuck about concurrency?",
+  text: "Do you give a shit about concurrency?",
   answers: [{
     text: "Yes",
     target: 14
@@ -109,7 +109,7 @@ var queries = [{
   }]
 }, {
   id: 14,
-  text: "Do you know why you care about concurrency?",
+  text: "Do you know why you give a shit about concurrency?",
   answers: [{
     text: "Yes",
     target: 16
@@ -119,7 +119,7 @@ var queries = [{
   }]
 }, {
   id: 15,
-  text: "I didn't think so you little shit. Just use Ruby - probably with Rails - and get the fuck out of my office.",
+  text: "I didn't think so you asshole. Just use Ruby - probably with Rails - and get the fuck out of my office.",
   answers: []
 }, {
   id: 16,
@@ -133,7 +133,7 @@ var queries = [{
   }]
 }, {
   id: 17,
-  text: "Use Go. It's pretty fucking awesome.",
+  text: "Use fucking Go.",
   answers: []
 }, {
   id: 18,
