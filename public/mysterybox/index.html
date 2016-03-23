@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>About | What f#&amp;king programming language should I use?</title>
+    <title>Mystery Box | What f#&amp;king programming language should I use?</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -45,10 +45,31 @@
       <div class="container main">
         <div class="row">
           <div class="col-xs-12 text-center">
-            <h1>About WFPLSIU?</h1>
-            <p>What f#&amp;king programming language should I use? is a tounge-in-cheek guide to choosing a programming language. Inspired by the endless nerd battles online about the "best" programming language in any scenario, this app turns it into a joke so we can all have some fun and stop taking ourselves so seriously.</p>
-            <p>The app was built with <a href="http://knockoutjs.com/">Knockout</a>. It was my first time using the framework and it was pleasantly simple compared to work I've done with Angular and Ember. If you don't need the power of Angular, Ember, or some other huge front-end framework, I would recommend taking a look at Knockout.</p>
-            <p>If you want to get in touch, you can email me at <strong><a href="mailto:bill@gotechspring.com">bill@gotechspring.com</a></strong>.</p>
+            <h1>I want your email. I'm not sure why, but a friend told me to.</h1>
+
+            <div id="mauticform_wrapper_mysterybox" class="mauticform_wrapper col-xs-12 col-md-6 col-md-offset-3">
+                <form autocomplete="false" role="form" method="post" action="https://techspring.mautic.com/form/submit?formId=1" id="mauticform_mysterybox" data-mautic-form="mysterybox">
+                    <div class="mauticform-error" id="mauticform_mysterybox_error"></div>
+                    <div class="mauticform-message" id="mauticform_mysterybox_message"></div>
+                    <div class="mauticform-innerform">
+
+                        <div id="mauticform_mysterybox_email"  data-validate="email" data-validation-type="email" class="mauticform-row mauticform-email mauticform-required">
+                            <input id="mauticform_input_mysterybox_email" name="mauticform[email]" value="" placeholder="Your fucking email" class="mauticform-input form-control" type="email" />
+                            <span class="mauticform-errormsg" style="display: none;">This is required.</span>
+                        </div>
+
+                        <div id="mauticform_mysterybox_submit"  class="mauticform-row mauticform-button-wrapper">
+                            <button type="submit" id="mauticform_input_mysterybox_submit" name="mauticform[submit]" class="mauticform-button btn btn-default btn-lg" value="1">Submit</button>
+                        </div>
+
+                        <input type="hidden" name="mauticform[formId]" id="mauticform_mysterybox_id" value="1" />
+                        <input type="hidden" name="mauticform[return]" id="mauticform_mysterybox_return" value="" />
+                        <input type="hidden" name="mauticform[formName]" id="mauticform_mysterybox_name" value="mysterybox" />
+
+                    </div>
+                </form>
+            </div>
+
           </div>
         </div>
       </div>
@@ -57,10 +78,30 @@
 
     <footer class="footer">
       <div class="container">
-        <span>Built by <a href="../mysterybox">Bill Broughton</a> |</span>
         <a href="/">Home</a>
       </div>
     </footer>
+
+    <script type="text/javascript">
+
+      /** This section is only needed once per page if manually copying **/
+      if (typeof MauticSDKLoaded == 'undefined') {
+          var MauticSDKLoaded = true;
+          var head            = document.getElementsByTagName('head')[0];
+          var script          = document.createElement('script');
+          script.type         = 'text/javascript';
+          script.src          = 'https://techspring.mautic.com/mautic/media/js/mautic-form.js';
+          script.onload       = function() {
+              MauticSDK.onLoad();
+          };
+          head.appendChild(script);
+          var MauticDomain = 'https://techspring.mautic.com';
+          var MauticLang   = {
+              'submittingMessage': "Please wait..."
+          }
+      }
+  </script>
+
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
