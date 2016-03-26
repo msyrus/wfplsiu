@@ -490,15 +490,26 @@ function QueryViewModel() {
   self.currentStep = ko.observable();
   self.queryData = ko.observable();
   self.sfw = ko.observable();
+  self.navHistory = ko.observableArray();
 
   // Operations
   self.goToTarget = function(obj) {
+    self.navHistory.push(self.currentStep());
+    console.log("Pushed to navHistory: " + obj.target);
     self.currentStep(obj.target);
     self.queryData(self.querySet()[obj.target]);
   }
 
   self.startOver = function() {
     self.goToTarget({target: 0});
+  }
+
+  self.stepBack = function() {
+    var lastStep = self.navHistory().length > 1 ? self.navHistory.pop() : 0;
+    console.log("Popped from navHistory: " + lastStep);
+    self.currentStep(lastStep);
+    self.queryData(self.querySet()[lastStep]);
+    console.log("Should be at previous step");
   }
 
   self.toggleSFW = function() {
