@@ -495,7 +495,6 @@ function QueryViewModel() {
   // Operations
   self.goToTarget = function(obj) {
     self.navHistory.push(self.currentStep());
-    console.log("Pushed to navHistory: " + obj.target);
     self.currentStep(obj.target);
     self.queryData(self.querySet()[obj.target]);
   }
@@ -506,10 +505,8 @@ function QueryViewModel() {
 
   self.stepBack = function() {
     var lastStep = self.navHistory().length > 1 ? self.navHistory.pop() : 0;
-    console.log("Popped from navHistory: " + lastStep);
     self.currentStep(lastStep);
     self.queryData(self.querySet()[lastStep]);
-    console.log("Should be at previous step");
   }
 
   self.toggleSFW = function() {
