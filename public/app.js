@@ -500,6 +500,7 @@ function QueryViewModel() {
   }
 
   self.startOver = function() {
+    self.navHistory.removeAll();
     self.goToTarget({target: 0});
   }
 
@@ -520,9 +521,35 @@ function QueryViewModel() {
     }
   }
 
-  self.sfw(false);
-  self.querySet(queries);
-  self.goToTarget({target: 0});
+  var paramsString = document.location.hash.substring(1);
+  var params = new Array();
+  if (paramsString) {
+    var paramValues = paramsString.split("&");
+    for (var i = 0; i < paramValues.length; i++) {
+      var paramValue = paramValues[i].split("=");
+      params[paramValue[0]] = paramValue[1];
+    }
+  }
+
+  ko.computed(function updateHash() {
+    if (self.currentStep()) {
+      document.location.hash = self.sfw() ? 'sfw=true&target=' + self.currentStep() : 'target=' + self.currentStep();
+    } else {
+      document.location.hash = "";
+    }
+  });
+
+  params ? paramTarget = params['target'] : params = [];
+
+  params['sfw'] == 'true' ? self.sfw(true) : self.sfw(false);
+  self.sfw() ? self.querySet(queriesSFW) : self.querySet(queries);
+  if (paramTarget) {
+    self.navHistory.push(0);
+    self.currentStep(0);
+    self.goToTarget({target: paramTarget})
+  } else {
+    self.goToTarget({target: 0});
+  }
 }
 
 ko.applyBindings(new QueryViewModel());
