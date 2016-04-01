@@ -55,11 +55,11 @@
             <button class="btn btn-default" type="submit" data-bind="click: stepBack, visible: navHistory().length > 1">Previous Step</button>
             <div class="social-share" data-bind="visible: queryData().id == 0 || queryData().answers.length == 0">
               Share this:
-              <a data-bind="attr: { href: 'http://www.reddit.com/submit?url=' + permalink() + '&title=What%20f&#35;&amp;king%20programming%20language%20should%20I%20use?' }"><span class="icon-reddit"></span></a>
-              <a data-bind="attr: { href: 'https://www.facebook.com/sharer/sharer.php?u=' + permalink() }"><span class="icon-facebook"></span></a>
-              <a data-bind="attr: { href: 'https://twitter.com/intent/tweet?text=What%20fucking%20programming%20language%20should%20I%20use?%3A%20' + permalink() }"><span class="icon-twitter"></span></a>
-              <a data-bind="attr: { href: 'https://plus.google.com/share?url=What%20fucking%20programming%20language%20should%20I%20use?%20' + permalink() }"><span class="icon-google-plus"></span></a>
-              <a data-bind="attr: { href: 'http://www.linkedin.com/shareArticle?mini=true&amp;url=' + permalink() + '&amp;title=What%20f#&amp;king%20programming%20language%20should%20I%20use?;summary=Your%20foul-mouthed%20technical%20advisor' }"><span class="icon-linkedin"></span></a>
+              <a target="_blank" data-bind="attr: { href: 'http://www.reddit.com/submit?url=' + permalink() + '&title=What%20f&#35;&amp;king%20programming%20language%20should%20I%20use?' }"><span class="icon-reddit"></span></a>
+              <a target="_blank" data-bind="attr: { href: 'https://www.facebook.com/sharer/sharer.php?u=' + permalink() }"><span class="icon-facebook"></span></a>
+              <a target="_blank" data-bind="attr: { href: 'https://twitter.com/intent/tweet?text=What%20fucking%20programming%20language%20should%20I%20use?%3A%20' + permalink() }"><span class="icon-twitter"></span></a>
+              <a target="_blank" data-bind="attr: { href: 'https://plus.google.com/share?url=What%20fucking%20programming%20language%20should%20I%20use?%20' + permalink() }"><span class="icon-google-plus"></span></a>
+              <a target="_blank" data-bind="attr: { href: 'http://www.linkedin.com/shareArticle?mini=true&amp;url=' + permalink() + '&amp;title=What%20f#&amp;king%20programming%20language%20should%20I%20use?;summary=Your%20foul-mouthed%20technical%20advisor' }"><span class="icon-linkedin"></span></a>
             </div>
           </div>
         </div>
