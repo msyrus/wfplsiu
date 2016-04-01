@@ -539,6 +539,17 @@ function QueryViewModel() {
     }
   });
 
+  self.permalink = ko.computed(function makePermalink() {
+    var temp = 'http://www.wfplsiu.com/#'
+    if (self.currentStep() != 0) {
+      temp = temp + 'target=' + self.currentStep();
+      self.sfw() ? temp += '&sfw=true' : false;
+    } else if (self.sfw()) {
+      temp += 'sfw=true';
+    }
+    return temp;
+  })
+
   params ? paramTarget = params['target'] : params = [];
 
   params['sfw'] == 'true' ? self.sfw(true) : self.sfw(false);
